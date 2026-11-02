@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import "../globals.css";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: {
-    default: "NEXORA | دنیای تکنولوژی",
-    template: "%s | NEXORA",
-  },
+  title: "NEXORA",
   description: "مجله تخصصی تکنولوژی، برنامه‌نویسی و هوش مصنوعی",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="en">
+    <html lang="fa" dir="rtl">
       <body>{children}</body>
     </html>
   );

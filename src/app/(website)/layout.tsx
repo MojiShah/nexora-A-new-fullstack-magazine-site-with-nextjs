@@ -1,7 +1,7 @@
 import Footer from "@/components/layouts/Footer";
 import Navbar from "@/components/layouts/Navbar";
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: Readonly<{children: React.ReactNode;}>) {
   return (
     <div dir="rtl" className="min-h-screen">
       <Navbar />
